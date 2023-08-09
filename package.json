@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@expo-google-fonts/quicksand": "^0.2.3",
+    "@react-navigation/native": "react-navigation/native",
     "expo": "^49.0.6",
     "expo-constants": "^14.4.2",
     "expo-font": "^11.4.0",

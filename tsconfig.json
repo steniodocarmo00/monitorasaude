@@ -4,18 +4,10 @@
     "strict": true,
     "baseUrl": ".",
     "paths": {
-      "@/components/*": [
-        "./src/components/*"
-      ],
-      "@/assets/*": [
-        "./src/assets/*"
-      ],
-      "@/app/*": [
-        "./src/app/*"
-      ],
-      "@/theme/*": [
-        "./src/theme/*"
-      ]
+      "@/components/*": ["./src/components/*"],
+      "@/assets/*": ["./src/assets/*"],
+      "@/app/*": ["./src/app/*"],
+      "@/theme/*": ["./src/theme/*"]
     }
   }
 }

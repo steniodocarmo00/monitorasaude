@@ -12,14 +12,14 @@ export const theme = extendTheme({
       70: "#8EC398",
       80: "#82BF8E",
       90: "#75B982",
-      100: "#69B578"
+      100: "#69B578",
     },
     black: {
       10: "#BFC0C0",
       30: "#999B9B",
       50: "#737777",
       80: "#4D5252",
-      100: "#272D2D"
+      100: "#272D2D",
     },
     blue: {
       10: "#C2D1DC",
@@ -32,25 +32,25 @@ export const theme = extendTheme({
       80: "#468ABC",
       100: "#3581B8",
     },
-    white: "#FFFFFF"
+    white: "#FFFFFF",
   },
-  font_family: {
+  fonts: {
     regular: "Quicksand_400Regular",
     bold: "Quicksand_700Bold",
-    semibold: "Quicksand_600SemiBold"
+    semibold: "Quicksand_600SemiBold",
   },
 
   font_size: {
     "2xs": 8,
-    "xs": 10,
-    "sm": 12,
-    "md": 14,
-    "lg": 16,
-    "xl": 18,
+    xs: 10,
+    sm: 12,
+    md: 14,
+    lg: 16,
+    xl: 18,
     "2xl": 20,
-    "3xl": 40   
+    "3xl": 40,
   },
   sizes: {
-    14: 56
-  }
-})
+    14: 56,
+  },
+});
