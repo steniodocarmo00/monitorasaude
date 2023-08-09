@@ -3,6 +3,9 @@
     "name": "girottosmap",
     "slug": "girottosmap",
     "scheme": "girottosmap",
+    "experiments": {
+      "tsconfigPaths": true
+    },
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
