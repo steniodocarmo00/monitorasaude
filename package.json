@@ -9,8 +9,10 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@expo-google-fonts/quicksand": "^0.2.3",
     "expo": "^49.0.6",
     "expo-constants": "^14.4.2",
+    "expo-font": "^11.4.0",
     "expo-linking": "^5.0.2",
     "expo-router": "^2.0.1",
     "expo-status-bar": "^1.6.0",
