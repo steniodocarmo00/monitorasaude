@@ -51,6 +51,10 @@ export const theme = extendTheme({
     "3xl": 40,
   },
   sizes: {
+    13: 52,
     14: 56,
+    15: 60,
+    90: 360,
+    
   },
 });
