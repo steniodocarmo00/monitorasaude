@@ -10,7 +10,7 @@ import { Input } from "@/components/input";
 import IconSvg from "@/assets/authicon.svg";
 import {} from "@expo/vector-icons";
 import { useState } from "react";
-import { Button } from "@/components/signbutton";
+import { Button } from "@/components/signButton";
 import { Link } from "expo-router";
 
 export default function SignUp() {
