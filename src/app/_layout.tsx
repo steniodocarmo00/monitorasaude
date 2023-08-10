@@ -41,7 +41,7 @@ export default function Layout() {
           <Stack.Screen
             name="index"
             options={{
-              title: "SignIn",
+              title: "SignUp",
             }}
           />
         </Stack>
