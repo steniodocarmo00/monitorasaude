@@ -1,5 +1,5 @@
 import { SearchBar } from "@/components/searchBar";
-import { Center, Text, VStack, View } from "native-base";
+import { Center, Modal, Text, VStack, View } from "native-base";
 import {
   useForegroundPermissions,
   watchPositionAsync,
@@ -12,16 +12,18 @@ import { getAddressLocation } from "@/utils/getAddressLocation";
 import { Loading } from "@/components/loading";
 import { Map } from "@/components/map";
 import { RegisterButton } from "@/components/registerButton";
+import { ModalRegister } from "@/components/modalRegister";
+import { ModalList } from "@/components/modalList";
 
 export default function Home() {
   const [locationForegroundPermission, requestLocationForegroundPermission] =
     useForegroundPermissions();
-
   const [isLoadingLocation, setIsLoadingLocation] = useState(true);
-
   const [currentAddress, setCurrentAddress] = useState<string | null>(null);
   const [currentCoords, setCurrentCoords] =
     useState<LocationObjectCoords | null>(null);
+  const [showModal, setShowModal] = useState(false);
+  const [showModalList, setShowModalList] = useState(false);
 
   useEffect(() => {
     requestLocationForegroundPermission();
@@ -86,9 +88,15 @@ export default function Home() {
       <VStack flex={1} position="absolute">
         <Center>
           <SearchBar />
-          <RegisterButton />
+          <RegisterButton onPress={() => setShowModal(true)}/>
         </Center>
       </VStack>
+      <Modal isOpen={showModal} onClose={() => setShowModal(false)}>
+        <ModalRegister onPress={() => {setShowModalList(true), setShowModal(false)}}/>
+      </Modal>
+      <Modal isOpen={showModalList} onClose={() => setShowModalList(false)}>
+        <ModalList />
+      </Modal>
     </View>
   );
 }
