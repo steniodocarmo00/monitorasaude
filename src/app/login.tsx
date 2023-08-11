@@ -35,7 +35,7 @@ export default function SignIn() {
           <Link href={"/home"}>
             home
           </Link>
-            <Button title="ACESSAR CONTA" mb={5} />
+            <Button title="ACESSAR CONTA" mb={5} textSize="md"/>
           <Link href={"/"}>
             <Text fontSize="sm" fontFamily="semibold">
               Não tem uma conta? Cadastre-se

@@ -48,7 +48,7 @@ export default function SignUp() {
               Eu concordo com os Termos de Uso
             </Text>
           </HStack>
-          <Button title="CADASTRAR" mb={5} />
+          <Button title="CADASTRAR" mb={5} textSize="md"/>
           <Link href={"/login"}>
             <Text fontSize="sm" fontFamily="semibold">
               Já tem uma conta? Faça login
