@@ -4,8 +4,8 @@ dotenv.config();
 
 module.exports = {
   "expo": {
-    "name": "girottosmap",
-    "slug": "girottosmap",
+    "name": "monitorasaude",
+    "slug": "monitorasaude",
     "extra": {
       "eas": {
         "projectId": "fde60ba5-8ee6-4a73-b02a-1ed350ef593f"
