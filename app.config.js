@@ -8,7 +8,7 @@ module.exports = {
     "slug": "monitorasaude",
     "extra": {
       "eas": {
-        "projectId": "fde60ba5-8ee6-4a73-b02a-1ed350ef593f"
+        "projectId": "6355a5d7-de06-42da-9a42-792469191dcd"
       }
     },
     "experiments": {
