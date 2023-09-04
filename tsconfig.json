@@ -6,9 +6,14 @@
     "paths": {
       "@/components/*": ["./src/components/*"],
       "@/assets/*": ["./src/assets/*"],
-      "@/app/*": ["./src/app/*"],
       "@/theme/*": ["./src/theme/*"],
-      "@/utils/*": ["./src/utils/*"]
+      "@/utils/*": ["./src/utils/*"],
+      "@/services/*": ["./src/services/*"],
+      "@routes/*": ["./src/routes/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@context/*": ["./src/context/*"],
+      "@screens/*": ["./src/screens/*"]
     }
   }
 }

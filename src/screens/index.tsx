@@ -14,8 +14,10 @@ import { Map } from "@/components/map";
 import { RegisterButton } from "@/components/registerButton";
 import { ModalRegister } from "@/components/modalRegister";
 import { ModalList } from "@/components/modalList";
+import { getAuth, signOut } from "firebase/auth";
 
-export default function Home() {
+export function Home() {
+  const auth = getAuth()
   const [locationForegroundPermission, requestLocationForegroundPermission] =
     useForegroundPermissions();
   const [isLoadingLocation, setIsLoadingLocation] = useState(true);
@@ -24,6 +26,14 @@ export default function Home() {
     useState<LocationObjectCoords | null>(null);
   const [showModal, setShowModal] = useState(false);
   const [showModalList, setShowModalList] = useState(false);
+
+  const handleSignOut = async () => {
+    try {
+      await signOut(auth)
+    } catch (error) {
+      console.log(error)
+    }
+  }
 
   useEffect(() => {
     requestLocationForegroundPermission();
@@ -63,7 +73,6 @@ export default function Home() {
     return (
       <VStack flex={1}>
         <Center>
-          <SearchBar />
           <Text
             top="280"
             textAlign="center"
@@ -87,12 +96,12 @@ export default function Home() {
       {currentCoords && <Map coordinates={[currentCoords]} />}
       <VStack flex={1} position="absolute">
         <Center>
-          <SearchBar />
+          <SearchBar onPress={handleSignOut}/>
           <RegisterButton onPress={() => setShowModal(true)}/>
         </Center>
       </VStack>
       <Modal isOpen={showModal} onClose={() => setShowModal(false)}>
-        <ModalRegister onPress={() => {setShowModalList(true), setShowModal(false)}}/>
+        <ModalRegister />
       </Modal>
       <Modal isOpen={showModalList} onClose={() => setShowModalList(false)}>
         <ModalList />
