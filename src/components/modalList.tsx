@@ -1,10 +1,7 @@
 import { Center, Modal, Text, VStack } from "native-base";
-import { useState } from "react";
-import { Button } from "@/components/signButton"
 import { HealthCenterCard } from "./healthCenterCard";
 
-export function ModalList   () {
-  const [service, setService] = useState("");
+export function ModalList () {
 
   return (
     <Modal.Content h="750px" w="100%" maxHeight="750px" borderRadius={20} bg="white">
