@@ -6,7 +6,11 @@ module.exports = {
   "expo": {
     "name": "girottosmap",
     "slug": "girottosmap",
-    "scheme": "girottosmap",
+    "extra": {
+      "eas": {
+        "projectId": "fde60ba5-8ee6-4a73-b02a-1ed350ef593f"
+      }
+    },
     "experiments": {
       "tsconfigPaths": true
     },
@@ -17,7 +21,7 @@ module.exports = {
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#69B578"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -37,7 +41,9 @@ module.exports = {
         "googleMaps": {
           "apiKey": process.env.GOOGLE_MAPS_API_KEY
         }
-      }
+      },
+      "package": "com.yourcompany.girottosmap",
+      "versionCode": 1
     },
     "web": {
       "favicon": "./assets/favicon.png"

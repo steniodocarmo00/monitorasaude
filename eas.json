@@ -1,0 +1,15 @@
+{
+  "cli": {
+    "version": ">= 5.1.0"
+  },
+  "build": {
+    "preview": {
+      "android": {
+        "buildType": "apk"
+      },
+      "env": {
+        "GOOGLE_MAPS_API_KEY": "AIzaSyCNhyFqLAfX5W_5Ic5G6r0quML-X-15mMs"
+      }
+    }
+  }
+}
