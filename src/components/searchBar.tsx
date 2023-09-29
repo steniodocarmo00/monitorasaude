@@ -3,7 +3,7 @@ import { Feather } from '@expo/vector-icons';
 
 export function SearchBar({...rest}) {
   return(
-    <HStack mx={4} mt={8} alignItems="center">
+    <HStack mx={4} mt={8} alignItems="center" mb={96}>
       <Input 
       placeholder="Buscar local" 
       w={72}

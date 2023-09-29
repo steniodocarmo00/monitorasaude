@@ -16,8 +16,7 @@ export function RegisterButton({ ...rest }: IIconButtonProps) {
           borderWidth="1" 
           borderColor="blue.100"
           left={40}
-          top={96}
-          marginY={56}
+          mt={24}
           marginRight={12}
           {...rest}
         />
