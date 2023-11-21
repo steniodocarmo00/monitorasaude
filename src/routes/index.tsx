@@ -1,41 +1,20 @@
-import { AppRoutes } from "./app.routes";
-import { AuthRoutes } from "./auth.routes";
-import { useEffect, useState } from "react"
-import { NavigationContainer } from "@react-navigation/native";
-import { User } from "firebase/auth";
-import { Auth } from "@/services/firebase.config";
-import { Loading } from "@/components/loading";
+import { NavigationContainer } from '@react-navigation/native';
 
-function useAuth() {
-  const [user, setUser] = useState<User | null>(null); // Initialize with null
-  const [initializing, setInitializing] = useState(true);
+import { AppRoutes } from './app.routes';
+import { AuthRoutes } from './auth.routes';
+import { Loading } from '@/components/loading';
+import { useAuth } from '@hooks/useAuth';
 
-  useEffect(() => {
-    const unsubscribe = Auth.onAuthStateChanged((user: User | null) => {
-      setUser(user);
-      setInitializing(false);
-    });
+export function Routes() {
+  const { isLoggedIn, isLoadingAuthInfo } = useAuth();
 
-    return () => unsubscribe();
-  }, []);
-
-  return {
-    user,
-    initializing
-  };
-}
-
-export default function RootNavigation() {
-
-  const { user, initializing } = useAuth()
-
-  if (initializing) {
-    return <Loading />; // Show the Loading component while the app is initializing
+  if (isLoadingAuthInfo) {
+    return <Loading />;
   }
 
   return (
     <NavigationContainer>
-     { user ? <AppRoutes /> : <AuthRoutes />} 
+      {isLoggedIn ? <AppRoutes /> : <AuthRoutes />}
     </NavigationContainer>
-  )
+  );
 }

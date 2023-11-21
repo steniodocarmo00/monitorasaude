@@ -4,7 +4,7 @@ dotenv.config();
 
 module.exports = {
   "expo": {
-    "name": "monitorasaude",
+    "name": "Monitora Saúde",
     "slug": "monitorasaude",
     "extra": {
       "eas": {
@@ -42,7 +42,7 @@ module.exports = {
           "apiKey": process.env.GOOGLE_MAPS_API_KEY
         }
       },
-      "package": "com.yourcompany.girottosmap",
+      "package": "com.cesupa.monitorasaude",
       "versionCode": 1
     },
     "web": {
@@ -53,8 +53,9 @@ module.exports = {
         "expo-location",
         {
           "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location."
-        }
-      ]
+        },
+      ],
+      "expo-router"
     ]
   }
 }

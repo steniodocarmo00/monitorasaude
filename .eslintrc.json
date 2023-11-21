@@ -1,0 +1,3 @@
+{
+  "extends": "@geta-org/eslint-config/native"
+}

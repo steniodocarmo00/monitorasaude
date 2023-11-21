@@ -5,10 +5,10 @@ import {
   Quicksand_600SemiBold,
   Quicksand_700Bold,
 } from "@expo-google-fonts/quicksand";
-import { GlobalContext } from "@context/globalContext";
-import RootNavigation from "@routes/index";
+import { GlobalContext } from "@context/GlobalContext";
 import { Loading } from "@/components/loading";
 import * as SplashScreen from "expo-splash-screen"
+import { Routes } from "@routes/index";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -19,10 +19,10 @@ export default function App() {
 
   SplashScreen.preventAutoHideAsync();
   setTimeout(SplashScreen.hideAsync, 2000)
-  
+
   return (
     <GlobalContext>
-      {fontsLoaded ? ( <RootNavigation /> ) : ( <Loading /> )}
+      {fontsLoaded ? ( <Routes /> ) : ( <Loading /> )}
       <StatusBar />
     </GlobalContext>
   );
